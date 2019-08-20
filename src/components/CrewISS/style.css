@@ -1,0 +1,11 @@
+.crew-box{
+    background:#f7f7f7;
+    border-radius: 15px;
+    padding:5px;
+}
+
+.amount-box{
+    margin: 10px; 
+    font-size:large;
+    align-content: center;
+}
