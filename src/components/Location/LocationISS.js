@@ -22,9 +22,7 @@ class ConnectedLocationISS extends Component {
 
   render() {
     return (
-       <div style={locationISSStyle}>
-          ISS
-       </div>
+       <div style={locationISSStyle}>ISS</div>
     );
   }
 }

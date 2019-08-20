@@ -5,7 +5,13 @@ import LocationPanel from "./components/LocationPanel"
 import Map from "./components/Map"
 import CrewISS from "./components/CrewISS/CrewISS"
 import { connect } from "react-redux"
-import { updateCoordinates, updateCrew } from "./actions/index"
+import { updateCoordinates, updateCrew, updateDate } from "./actions/index"
+import TimeBox from "./components/TimeBox/TimeBox";
+import { Button, Icon } from 'antd';
+import 'antd/dist/antd.css';
+import { Row, Col } from 'antd';
+
+import moment from "moment"
 
 class ConnectedApp extends Component {
   constructor() {
@@ -19,11 +25,13 @@ class ConnectedApp extends Component {
   componentDidMount() {
     this.props.updateCoordinates()
     this.props.updateCrew()
-    // let timer = setInterval(()=>{
-    //   this.props.updateCoordinates()
-    //   this.props.updateCrew()
-    // }, 5000)
-    // this.setState({timer})
+    this.props.updateDate(moment().utc())
+    let timer = setInterval(()=>{
+      this.props.updateCoordinates()
+      this.props.updateCrew()
+      this.props.updateDate(moment().utc())
+    }, 5000)
+    this.setState({timer})
 
   }
 
@@ -34,15 +42,23 @@ class ConnectedApp extends Component {
 
   render() {
     return (
-      <div>
-        <LocationPanel />
-        <Map />
-        <CrewISS />
+      <div  className="grid-block">
+        <Row gutter={16} >
+          <Col className="location" span={18}  ><LocationPanel /></Col>
+          <Col className="date" span={6}  > <TimeBox /></Col>
+        </Row>
+        <Row gutter={16} style={{matginTop:20}} >
+          <Col span={18} className="map"><Map /></Col>
+          <Col span={6} className="crew"><CrewISS /></Col>
+        </Row>
+
+
+
       </div>
     )
   }
 }
 
 
-const App = connect(null, {updateCoordinates, updateCrew})(ConnectedApp)
+const App = connect(null, { updateCoordinates, updateCrew, updateDate })(ConnectedApp)
 export default App;

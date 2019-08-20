@@ -25,9 +25,12 @@ class ConnectedLocationPanel extends Component {
         console.log("LocationPanle__");
         
         console.log(this.props.coordinates);
-        
-        return(<div>
-            {this.getCoordinates(this.props.coordinates)}
+        const {longitude, latitude} = this.props.coordinates;
+
+        return(<div className="location-box" >
+            <p><strong>ISS is now located at:</strong><br/>
+            <i>{"longitude: " + longitude + ", latitude: " + latitude }</i>
+            </p>
         </div>)
         
     }

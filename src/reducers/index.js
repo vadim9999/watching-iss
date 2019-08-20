@@ -1,11 +1,14 @@
-import { COORDINATES_LOADED, CREW_LOADED } from "../constants/action-types"
+import { COORDINATES_LOADED, CREW_LOADED, UPDATE_DATE } from "../constants/action-types"
+import moment from "moment"
 
 const initialState = {
     coordinates: {
         longitude:0,
         latitude:0
     },
-    crew:[]
+    crew:[],
+    date: moment().utc()
+
 }
 
 function rootReducer(state = initialState, action) {
@@ -27,7 +30,13 @@ function rootReducer(state = initialState, action) {
            return Object.assign({}, state, {
                 crew: action.payload
             })
-            
+
+        case UPDATE_DATE:
+            console.log("Reducer_UPDATE_TIME");
+            return Object.assign({}, state, {
+                date: action.payload
+            })
+
         default:
             return state;
             break;

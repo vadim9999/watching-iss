@@ -12,12 +12,12 @@ function mapStateToProps(state){
 class ConnectedMap extends Component {
 constructor(){
     super()
+    this.state={
+
+    }
 }
   static defaultProps = {
-    center: {
-      lat: 59.95,
-      lng: 30.33
-    },
+    
     // zoom: 0
   };
 
@@ -36,13 +36,18 @@ constructor(){
       console.log(latitude);
       console.log(longitude);
       
-      
+      const defaultCoordinates = {
+        center: {
+          lat: 0,
+          lng: 0
+        },
+      }
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '80vh', width: '80%' }}>
+      <div className="gutter-box-map" style={{ height: '90vh', width: '100%' }}>
         <GoogleMapReact
         center={this.getCoordinates(this.props.coordinates)}
-          defaultCenter = {this.props.center}
+         
           defaultZoom={4}
         >
           <LocationISS />

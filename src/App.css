@@ -23,6 +23,58 @@
   color: #61dafb;
 }
 
+/* .gutter-example .ant-row > div {
+
+  border: 1 solid black;
+}
+
+.gutter-box {
+  background: #00a0e9;
+  margin:10px;
+  border-radius: 15px;
+  padding: 10px 0;
+} */
+.grid-block{
+  margin:15px
+}
+.location{
+  /* background:green; */
+  
+}
+.date{
+  /* background: gray */
+  
+  /* display: table-cell;   */
+}
+.date-box{
+  background: #f7f7f7;
+  border-radius: 15px;
+  padding-left: 25px;
+  font-size: large;
+}
+i {
+  font-size: 14
+}
+.location-box{
+  background:#f7f7f7;
+  padding-left:25px;
+  border-radius: 15px;
+  font-size:large;
+}
+
+.crew-box{
+  background:#f7f7f7;
+  border-radius: 15px;
+  padding:5px;
+}
+
+.amount-box{
+  background:ba;
+  margin: 10px; 
+  font-size:large;
+  align-content: center;
+  /* border: 1px solid gray; */
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
