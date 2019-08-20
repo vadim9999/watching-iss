@@ -11,12 +11,6 @@ function mapStateToProps(state) {
 }
 
 class ConnectedMap extends Component {
-  constructor() {
-    super()
-    this.state = {
-
-    }
-  }
 
   render() {
     const { latitude, longitude } = this.props.coordinates;
@@ -26,9 +20,14 @@ class ConnectedMap extends Component {
       lng: parseFloat(longitude)
     }
 
+    const defaultCenter = {
+      lat: 0, 
+      lng: 0
+    }
     return (
       <div className="box-map" >
         <GoogleMapReact
+          defaultCenter={defaultCenter}
           center={coordinates}
           defaultZoom={4}
         >
