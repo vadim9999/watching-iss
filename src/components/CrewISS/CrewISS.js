@@ -16,9 +16,8 @@ class ConnectedCrewISS extends Component {
                     renderItem={man => (
                         <List.Item>
                             <List.Item.Meta
-                                
                                 avatar={<Avatar src={astronaut} />}
-                                title={<a>{man.name}</a>}
+                                title={<a href="http://localhost:3000">{man.name}</a>}
                                 description={"Craft: " + man.craft}
                             />
                         </List.Item>
