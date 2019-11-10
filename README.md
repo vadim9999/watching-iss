@@ -13,6 +13,7 @@ Used this frameworks and libraries to create app:
 ## Screenshots
 
 <img src="https://github.com/vadim9999/watching-iss/blob/master/screenshots/screenshot1.png">
+
 ## How to run this project?
 
 
