@@ -7,8 +7,8 @@ import AppNext from "./AppNext";
 // import store from "./store/index";
 // import { Provider } from "react-redux";
 
-const container = document.getElementById("app");
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
+const container = document.getElementById("root");
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
 
 root.render(
   <AppNext />
