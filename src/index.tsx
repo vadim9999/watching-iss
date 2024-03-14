@@ -4,17 +4,18 @@ import "./index.css";
 import AppNext from "./AppNext";
 // import App from "./App";
 // import * as serviceWorker from './serviceWorker';
-// import store from "./store/index";
-// import { Provider } from "react-redux";
+import store from "./store/index";
+import { Provider } from "react-redux";
+import App from "./App";
 
 const container = document.getElementById("root");
 const root = createRoot(container!); // createRoot(container!) if you use TypeScript
 
 root.render(
-  <AppNext />
-  //   <Provider store={store}>
-  //     <App />
-  //   </Provider>
+
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 // If you want your app to work offline and load faster, you can change
