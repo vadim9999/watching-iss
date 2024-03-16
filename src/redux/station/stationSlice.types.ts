@@ -1,10 +1,10 @@
-import type { Moment } from "moment";
+import type { Crew } from "../../api/api.types";
 
 export interface StationState {
   coordinates: {
     longitude: number;
     latitude: number;
   };
-  crew: [];
-  date: Moment;
+  crew: Crew[];
+  date: string;
 }

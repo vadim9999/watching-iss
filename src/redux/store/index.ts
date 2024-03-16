@@ -9,6 +9,7 @@ import stationReducer from "../station/stationSlice";
 
 export const store = configureStore({
   reducer: { station: stationReducer },
+  // middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

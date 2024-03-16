@@ -9,22 +9,26 @@ const initialState: StationState = {
     latitude: 0,
   },
   crew: [],
-  date: moment().utc(),
+  date: moment().utc().toISOString(),
 };
 
 const stationSlice = createSlice({
   name: "station",
   initialState,
   reducers: {
-    setCoordinate: (
+    setCrew: (state, action: PayloadAction<StationState["crew"]>) => {
+      state.crew = action.payload;
+    },
+    setCoordinates: (
       state,
-      action: PayloadAction<StationState["coordinates"]>,
+      action: PayloadAction<Pick<StationState, "coordinates" | "date">>,
     ) => {
-      state.coordinates = action.payload;
+      state.coordinates = action.payload.coordinates;
+      state.date = action.payload.date;
     },
   },
 });
 
-export const { setCoordinate } = stationSlice.actions;
+export const { setCrew, setCoordinates } = stationSlice.actions;
 
 export default stationSlice.reducer;

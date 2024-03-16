@@ -1,12 +1,13 @@
 import React from 'react';
 import "./style.css";
 import { useAppSelector } from '../../redux/hooks/hooks';
+import moment from 'moment';
 
 const TimeBox = () => {
     const date = useAppSelector((state) => state.station.date);
 
-    const time = date.format("HH:mm")
-    const dateFormatted = date.format("dddd, D MMM YYYY")
+    const time = moment(date).utc().format("HH:mm")
+    const dateFormatted = moment(date).utc().format("dddd, D MMM YYYY")
 
     return (
         <div className="date-box">
