@@ -1,10 +1,11 @@
 # Watching iss
 
-Used this frameworks and libraries to create app:
-- ReactJS
+Stack:
+- ReactJS 18
+- TypeScript 5
 - google-map-react
 - moment
-- redux
+- redux toolkit
 - redux-saga
 - antd 
 - axios
