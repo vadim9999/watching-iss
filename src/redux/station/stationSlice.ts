@@ -1,12 +1,15 @@
-import type { PayloadAction} from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import type { StationState } from "./stationSlice.types";
+import moment from "moment";
 
 const initialState: StationState = {
   coordinates: {
     longitude: 0,
     latitude: 0,
   },
+  crew: [],
+  date: moment().utc(),
 };
 
 const stationSlice = createSlice({

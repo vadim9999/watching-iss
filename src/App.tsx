@@ -8,6 +8,7 @@ import './App.css';
 // import TimeBox from "./components/TimeBox/TimeBox";
 import { Row, Col } from 'antd';
 import LocationPanel from './components/LocationPanel/LocationPanel';
+import TimeBox from './components/TimeBox/TimeBox';
 // import moment from "moment"
 
 // class ConnectedApp extends Component {
@@ -59,7 +60,7 @@ const App = () => {
     <div className="grid-block">
       <Row gutter={16}>
         <Col span={18}><LocationPanel /></Col>
-        {/* <Col span={6}><TimeBox /></Col> */}
+        <Col span={6}><TimeBox /></Col>
       </Row>
       <Row gutter={16} style={{ marginTop: 20 }} >
         {/* <Col span={18}><Map /></Col> */}
