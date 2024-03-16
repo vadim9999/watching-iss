@@ -1,6 +1,4 @@
 import React from 'react';
-import { useAppSelector } from '../../../redux/hooks/hooks.js';
-import Marker from './Marker.js';
 import type { Props } from './LocationISS.types.js';
 import { locationISSStyle } from './locationISSStyle';
 
