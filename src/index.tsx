@@ -1,18 +1,17 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import AppNext from "./AppNext";
 // import App from "./App";
 // import * as serviceWorker from './serviceWorker';
-import store from "./store/index";
+import { store } from "./redux/store/index";
 import { Provider } from "react-redux";
 import App from "./App";
 
 const container = document.getElementById("root");
 const root = createRoot(container!); // createRoot(container!) if you use TypeScript
 
-root.render(
 
+root.render(
   <Provider store={store}>
     <App />
   </Provider>
