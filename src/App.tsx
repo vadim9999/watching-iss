@@ -9,6 +9,7 @@ import './App.css';
 import { Row, Col } from 'antd';
 import LocationPanel from './components/LocationPanel/LocationPanel';
 import TimeBox from './components/TimeBox/TimeBox';
+import CrewISS from './components/CrewISS/CrewISS';
 // import moment from "moment"
 
 // class ConnectedApp extends Component {
@@ -64,7 +65,7 @@ const App = () => {
       </Row>
       <Row gutter={16} style={{ marginTop: 20 }} >
         {/* <Col span={18}><Map /></Col> */}
-        {/* <Col span={6}><CrewISS /></Col> */}
+        <Col span={6}><CrewISS /></Col>
       </Row>
     </div>
   )
