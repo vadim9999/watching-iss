@@ -14,6 +14,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch({ type: UPDATE_CREW })
+    dispatch({ type: UPDATE_COORDINATES })
 
     let timer = setInterval(() => {
       dispatch({ type: UPDATE_COORDINATES })
