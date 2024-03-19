@@ -29,6 +29,7 @@ const stationSlice = createSlice({
   },
 });
 
+// setCrew([]) => { type: "station/setCoordinates", payload: [] }
 export const { setCrew, setCoordinates } = stationSlice.actions;
 
 export default stationSlice.reducer;

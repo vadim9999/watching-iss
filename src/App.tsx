@@ -6,26 +6,17 @@ import { Row, Col } from 'antd';
 import LocationPanel from './components/LocationPanel/LocationPanel';
 import TimeBox from './components/TimeBox/TimeBox';
 import CrewISS from './components/CrewISS/CrewISS';
-import { getCrew, getPosition } from './api';
 import { useAppDispatch } from './redux/hooks/hooks';
-import { setCoordinates, setCrew } from './redux/station/stationSlice';
-import moment from 'moment';
+import { UPDATE_COORDINATES, UPDATE_CREW } from './constants/action-types';
 
 const App = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    getCrew().then((data) => {
-      dispatch(setCrew(data))
-    });
-
+    dispatch({ type: UPDATE_CREW })
 
     let timer = setInterval(() => {
-      getPosition().then((response) => {
-
-        dispatch(setCoordinates({ coordinates: { latitude: Number(response.latitude), longitude: Number(response.longitude) }, date: moment().utc().toISOString() }))
-      })
-
+      dispatch({ type: UPDATE_COORDINATES })
     }, 5000)
 
     return () => {
