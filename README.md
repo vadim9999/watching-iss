@@ -9,6 +9,7 @@ Stack:
 - redux-saga
 - antd 
 - axios
+- Wepback 5
 
 
 ## Screenshots
