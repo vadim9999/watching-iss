@@ -4,7 +4,6 @@ import { useAppSelector } from '../../redux/hooks/hooks';
 
 const LocationPanel = () => {
     const { longitude, latitude } = useAppSelector((state) => state.station.coordinates)
-    // const dispatch = useAppDispatch();
 
     return (
         <div className="location-box" >
