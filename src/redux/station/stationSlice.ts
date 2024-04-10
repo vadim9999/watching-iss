@@ -12,6 +12,13 @@ const initialState: StationState = {
   date: moment().utc().toISOString(),
 };
 
+// case API_GET_CREW_ERRORED:
+//             console.log("Error while getting crew from server");
+//             return state;
+//         case API_GET_COORDINATES_ERRORED:
+//             console.log("Error while getting coordinates from server");
+//             return state
+
 const stationSlice = createSlice({
   name: "station",
   initialState,
