@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.2.3",
-    "antd": "5.15.3",
+    "antd": "5.16.5",
     "axios": "1.6.8",
     "google-map-react": "2.2.1",
     "moment": "2.30.1",
